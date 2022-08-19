@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func main() {
@@ -40,6 +41,10 @@ func main() {
 			if n > max {
 				max = n
 			}
+		}
+
+		if strings.ToLower(arguments[i]) == "end" {
+			break
 		}
 	}
 
