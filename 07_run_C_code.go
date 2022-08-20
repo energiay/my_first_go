@@ -5,7 +5,6 @@ package main
 // 	 printf("I am C code!\n");
 // }
 import "C"
-
 import "fmt"
 
 func main() {
