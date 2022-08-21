@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func a() {
 	fmt.Println("begin a()")
@@ -23,6 +26,11 @@ func b() {
 
 func main() {
 	fmt.Println("begin main()")
+
+	if len(os.Args) == 1 {
+		panic("Not enough arguments!")
+	}
+
 	a()
 	fmt.Println("end main()")
 }
