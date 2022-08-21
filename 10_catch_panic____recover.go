@@ -19,7 +19,6 @@ func b() {
 	fmt.Println("begin b()")
 	panic("Panic in b()!")
 	fmt.Println("end b()")
-
 }
 
 func main() {
