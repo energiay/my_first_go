@@ -8,7 +8,7 @@ func main() {
 	printSlice(aSlice)
 
 	fmt.Println("len: ", len(aSlice))
-	fmt.Println("cap: ", cap(aSlice))
+	fmt.Println("cap: ", cap(aSlice)) //capacity
 
 	reSlice := aSlice[1:3]
 	fmt.Print("reSlice: ")
@@ -23,6 +23,11 @@ func main() {
 	printSlice(aSlice)
 	printSlice(reSlice)
 
+	aSlice9 := []int{-1, 3, 4, 1, 7, 8, 5, 23, 4}
+	array5 := [5]int{-9, 2, 3, 4, 5}
+	copy(array5[0:], aSlice9)
+	fmt.Println("array5:", array5)
+	fmt.Println("aSlice9:", aSlice9)
 }
 
 func printSlice(x []int) {
