@@ -7,12 +7,18 @@ func main() {
 	fmt.Print("aSlice: ")
 	printSlice(aSlice)
 
+	fmt.Println("len: ", len(aSlice))
+	fmt.Println("cap: ", cap(aSlice))
+
 	reSlice := aSlice[1:3]
 	fmt.Print("reSlice: ")
 	printSlice(reSlice)
 
 	reSlice[0] = -100
 	reSlice[1] = -200
+
+	fmt.Println("len: ", len(reSlice))
+	fmt.Println("cap: ", cap(reSlice))
 
 	printSlice(aSlice)
 	printSlice(reSlice)
