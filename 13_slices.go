@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 	aSlice := []int{-1, 3, 4, 1, 7}
@@ -28,6 +31,24 @@ func main() {
 	copy(array5[0:], aSlice9)
 	fmt.Println("array5:", array5)
 	fmt.Println("aSlice9:", aSlice9)
+
+	mySlice := make([]aStructure, 0)
+	mySlice = append(mySlice, aStructure{"Mihalis", 180, 90})
+	mySlice = append(mySlice, aStructure{"Mihalis", 160, 90})
+	mySlice = append(mySlice, aStructure{"Mihalis", 380, 90})
+	mySlice = append(mySlice, aStructure{"Mihalis", 185, 90})
+	mySlice = append(mySlice, aStructure{"Mihalis", 10, 90})
+
+	sort.Slice(mySlice, func(i, j int) bool {
+		return mySlice[i].height > mySlice[j].height
+	})
+	fmt.Println(mySlice)
+}
+
+type aStructure struct {
+	person string
+	height int
+	weight int
 }
 
 func printSlice(x []int) {
