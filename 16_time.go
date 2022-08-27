@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"path/filepath"
 	"time"
 )
 
@@ -23,4 +25,21 @@ func main() {
 	loc, _ := time.LoadLocation("Europe/Paris")
 	londonTime := t.In(loc)
 	fmt.Println("Paris:", londonTime)
+
+	var myTime string
+	if len(os.Args) != 2 {
+		fmt.Println("usage : %s string", filepath.Base(os.Args[0]))
+		os.Exit(1)
+	}
+
+	myTime = os.Args[1]
+
+	d, err := time.Parse("15:04", myTime) // 15 - часы, 04 - минуты, 05  - секунды
+	if err == nil {
+		fmt.Println("Full:", d)
+		fmt.Println("Time:", d.Hour(), d.Minute())
+	} else {
+		fmt.Println(err)
+	}
+
 }
