@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	begin := time.Now() // измерение времени
 
 	logs := []string{
 		"[2022-08-01 14:28] тестовый лог для тестовой задачи",
@@ -34,4 +35,7 @@ func main() {
 			//fmt.Println("Not a match!")
 		}
 	}
+
+	duration := time.Since(begin)
+	fmt.Println("It took this code: <", duration, "> to finish")
 }
