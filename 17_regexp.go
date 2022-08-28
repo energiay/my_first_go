@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+
 	logs := []string{
 		"[2022-08-01 14:28] тестовый лог для тестовой задачи",
 		"[2022-0-8-27 14:28] тестовый лог для тестовой задачи",
@@ -16,21 +17,21 @@ func main() {
 	}
 
 	for _, logEntry := range logs {
+		//r := regexp.MustCompile(`.*(\d\d\d\d-\d\d-\d\d).*`)
 		r := regexp.MustCompile(`.*(\d\d\d\d-\d\d-\d\d).*`)
 		if r.MatchString(logEntry) {
 			match := r.FindStringSubmatch(logEntry)
-			fmt.Println(match)
+			//fmt.Println(match)
 
-			dt, err := time.Parse("2006 Jan 02", match[0])
+			dt, err := time.Parse("2006-01-02", match[1])
 			if err == nil {
 				newFormat := dt.Format(time.RFC850)
 				fmt.Println(newFormat)
 			} else {
-				fmt.Println("no")
+				fmt.Println("no:", err)
 			}
 		} else {
 			//fmt.Println("Not a match!")
 		}
 	}
-
 }
