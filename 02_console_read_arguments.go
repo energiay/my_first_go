@@ -19,12 +19,12 @@ func main() {
 	io.WriteString(os.Stderr, "\n")
 
 	// вот это новость :)
-	//h, k := "4", "5"
-	//i, k := "2", "3"
-	//io.WriteString(os.Stdout, k)
-	//io.WriteString(os.Stdout, i)
-	//io.WriteString(os.Stdout, h)
-	//io.WriteString(os.Stdout, "\n")
+	h, k := "4", "5"
+	i, k := "2", "3"
+	io.WriteString(os.Stdout, k)
+	io.WriteString(os.Stdout, i)
+	io.WriteString(os.Stdout, h)
+	io.WriteString(os.Stdout, "\n")
 }
 
 // go run 02_console_read_arguments.go 2>/tmp/stdError
