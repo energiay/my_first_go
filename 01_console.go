@@ -8,7 +8,7 @@ func main() {
     mySecondString := "my second string \n"
 
     // посмотри как себя ведут Print\Println\Printf
-    //fmt.Print(num, mySecondString, myFirstString)
+    fmt.Print(num, mySecondString, myFirstString)
     //fmt.Println("123")
     //fmt.Println(num, mySecondString, myFirstString)
     //fmt.Println(num, " ", mySecondString, " ", myFirstString)
