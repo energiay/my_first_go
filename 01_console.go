@@ -7,9 +7,10 @@ func main() {
     myFirstString := "my string"
     mySecondString := "my second string \n"
 
-    fmt.Print(num, mySecondString, myFirstString)
-    fmt.Println()
-    fmt.Println(num, mySecondString, myFirstString)
-    fmt.Println(num, " ", mySecondString, " ", myFirstString)
-    fmt.Printf("%d %s %s", num, myFirstString, mySecondString)
+    // посмотри как себя ведут Print\Println\Printf
+    //fmt.Print(num, mySecondString, myFirstString)
+    //fmt.Println("123")
+    //fmt.Println(num, mySecondString, myFirstString)
+    //fmt.Println(num, " ", mySecondString, " ", myFirstString)
+    //fmt.Printf("%d %s %s", num, myFirstString, mySecondString)
 }
